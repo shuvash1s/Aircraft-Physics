@@ -8,6 +8,8 @@ public class AircraftPhysics : MonoBehaviour
 
     public Transform centerOfMass;
 
+    public Transform forcesParent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,5 +26,16 @@ public class AircraftPhysics : MonoBehaviour
     {
         rb.centerOfMass = centerOfMass.position;
         Vector3 CenterOfPressure;
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+
+        // Loop through all child transforms
+        foreach (Transform child in forcesParent)
+        {
+            Gizmos.DrawWireSphere(child.position, .1f);
+        }
     }
 }
