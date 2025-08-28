@@ -6,6 +6,8 @@ public class AircraftPhysics : MonoBehaviour
 {
     private Rigidbody rb;
 
+    public Transform centerOfMass;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,7 @@ public class AircraftPhysics : MonoBehaviour
 
     void SetupDynamics()
     {
-        rb.centerOfMass = 
-        Vector3 CenterOfPressure = 
+        rb.centerOfMass = centerOfMass.position;
+        Vector3 CenterOfPressure;
     }
 }
