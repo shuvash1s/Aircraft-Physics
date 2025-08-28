@@ -20,6 +20,7 @@ public class AircraftPhysics : MonoBehaviour
 
     void SetupDynamics()
     {
-
+        rb.centerOfMass = 
+        Vector3 CenterOfPressure = 
     }
 }
