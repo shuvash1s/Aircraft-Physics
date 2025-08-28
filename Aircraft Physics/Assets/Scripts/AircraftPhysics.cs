@@ -17,9 +17,9 @@ public class AircraftPhysics : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        SetupDynamics();
     }
 
     void SetupDynamics()
