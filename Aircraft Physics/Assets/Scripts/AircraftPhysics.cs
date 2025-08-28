@@ -10,6 +10,9 @@ public class AircraftPhysics : MonoBehaviour
 
     public Transform forcesParent;
 
+    [Header("Thrust")]
+    public float maxThrust;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,8 @@ public class AircraftPhysics : MonoBehaviour
     void FixedUpdate()
     {
         SetupDynamics();
+
+        rb.AddForce(transform.forward * maxThrust);
     }
 
     void SetupDynamics()
